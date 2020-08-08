@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#F54D27">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Conoce sobre el manejador de versiones rapido Git.">
+        <title>Git</title>
+        <link rel="shortcut icon" href="images/git-logo.png" type="image/png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/baguetteBox.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-git sticky-top">
+            <a class="navbar-brand" href="/DAW_investigacion_aplicada_1/">
+                <img src="images/gi-whitet-logo.png" width="30" height="30" class="d-inline-block align-top" alt="Navbar logo" loading="lazy">&nbsp;
+                <strong>Git</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a id="cvs-option" class="nav-link" href="#cvs">SCV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="git-option" class="nav-link" href="#git">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="command-option" class="nav-link" href="#command">Comando básicos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="install-option" class="nav-link" href="#install">Instalación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="github-option" class="nav-link" href="#github">GitHub Pages</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <header class="pt-3 py-3 d-flex justify-content-center">
+            <img src="images/git-logo.png" alt="Header git" width="120" height="120">
+        </header>
+        <section id="cvs" class="pb-5">
+            <div class="container pt-3 pb-3 text-center">
+                <h4>Sistema de control de versiones</h4>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <nav class="cvs">
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-what-tab" data-toggle="tab" href="#nav-what" role="tab" aria-controls="nav-what" aria-selected="true">¿Qué es?</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Características</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Ventajas</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                            <div class="tab-pane fade show w-100 active" id="nav-what" role="tabpanel" aria-labelledby="nav-what-tab">
+                                <p class="container" style="text-align: justify;">Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante. Aunque en los ejemplos de este libro usarás archivos de código fuente como aquellos cuya versión está siendo controlada, en realidad puedes hacer lo mismo con casi cualquier tipo de archivo que encuentres en una computadora.<br><br>Dicho sistema permite regresar a versiones anteriores de los archivos, regresar a una versión anterior del proyecto completo, comparar cambios a lo largo del tiempo, ver quién modificó por última vez algo que pueda estar causando problemas, ver quién introdujo un problema y cuándo, y mucho más. Usar un VCS también significa generalmente que si arruinas o pierdes archivos, será posible recuperarlos fácilmente.</p>
+                            </div>
+                            <div class="tab-pane fade w-100" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <p class="container" style="text-align: justify;">Un sistema de control de versiones debe proporcionar:</p>
+                                <div class="container">
+                                    <ul class="container">
+                                        <li>Mecanismo de almacenamiento de los elementos que deba gestionar (ej. archivos de texto, imágenes, documentación...).</li>
+                                        <li>Posibilidad de realizar cambios sobre los elementos almacenados (ej. modificaciones parciales, añadir, borrar, renombrar o mover elementos).</li>
+                                        <li>Registro histórico de las acciones realizadas con cada elemento o conjunto de elementos (normalmente pudiendo volver o extraer un estado anterior del producto).</li>
+                                    </ul>
+                                </div>
+                                <p class="container" style="text-align: justify;">Aunque no es estrictamente necesario, suele ser muy útil la generación de informes con los cambios introducidos entre dos versiones, informes de estado, marcado con nombre identificativo de la versión de un conjunto de ficheros, etc.</p>
+                            </div>
+                            <div class="tab-pane fade w-100" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <p class="container" style="text-align: justify;">Utilizar un sistema de control de versiones tiene, entre otras, las siguientes ventajas:</p>
+                                <div class="container">
+                                    <ul class="container">
+                                        <li>Permite mantener un historial de todo el desarrollo del proyecto.</li>
+                                        <li>Añade trazabilidad al desarrollo de software, ya que se puede ver qué cambios se han hecho en el código en cada versión.</li>
+                                        <li>Muestra mucha información estadística de cómo se está desarrollando el proyecto (principales autores, número de versiones, cambios, etc.), y que archivos se han editado o eliminado.</li>
+                                        <li>Facilita mucho el trabajo en equipo.</li>
+                                        <li>Permite desarrollar varias versiones de un mismo programa a la vez.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="git">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 text-center py-3">
+                        <img src="images/gi-whitet-logo.png" width="150" alt="Logo">
+                    </div>
+                    <div id="content-git" class="col-xl-8 col-lg-8 col-md-8 col-sm-12 py-3">
+                        <p>Es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente. Su propósito es llevar registro de los cambios en archivos de computadora y coordinar el trabajo que varias personas realizan sobre archivos compartidos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="command">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-8">
+                        <h2>h</h2>
+                    </div>
+                    <div class="col-4">
+                        <div class="baguetteBoxOne gallery">
+                            <a href="images/git-logo.png" data-caption="Logo">
+                                <img src="images/git-logo.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </section>
+        <section id="install">
+            <div class="">
+                <h1>Hola</h1>
+                <h2>Que hace</h2>
+            </div>
+        </section>
+        <section id="github">
+            <div class="">
+                <h1>Hola</h1>
+                <h2>Que hace</h2>
+            </div>
+        </section>
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/baguetteBox.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            baguetteBox.run('.baguetteBoxFour', {
+                buttons: false
+            });
+        </script>
+    </body>
+</html>
