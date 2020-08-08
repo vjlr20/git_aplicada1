@@ -94,5 +94,22 @@ html, body {
 
 #command {
     background-color: #de4c36;
+    color: #FDFDFD;
 }
+
+#command h3 {
+    color: #222;
+}
+
+.link-info {
+    border: #222 2px solid;
+    border-radius: 50px !important
+}
+
+.link-info:hover {
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
 
