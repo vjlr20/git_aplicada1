@@ -116,3 +116,13 @@ html, body {
     width: 100%;
 }
 
+.h-install-process {
+    height: 40px;
+}
+
+@media only screen and (max-width: 992px) {
+    .h-install-process {
+        height: auto;
+    }
+}
+
