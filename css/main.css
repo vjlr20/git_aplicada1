@@ -126,3 +126,29 @@ html, body {
     }
 }
 
+.link-install-process {
+    border: #222 2px solid;
+    border-radius: 15px !important
+}
+
+.link-install-process:hover {
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+#github {
+    background-color: #2B2C2F;
+    color: #FDFDFD;
+}
+
+.text-foot-git {
+    text-align: center;
+    color: #FDFDFD;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.text-foot-git {
+    margin: 0 !important;
+}
